@@ -1,0 +1,20 @@
+<swiper
+  [spaceBetween]="30"
+  [centeredSlides]="true"
+  [autoplay]="{
+      delay: 5000,
+      disableOnInteraction: false
+    }"
+  [pagination]="{
+      clickable: true
+    }"
+  class="swiper-slider"
+
+>
+  <ng-template swiperSlide *ngFor="let dat of data">
+    <a [routerLink]="dat.id">
+    <img class="slider-img" [src]="dat.imageUrls[0]">
+    </a>
+  </ng-template>
+
+</swiper>

@@ -1,0 +1,11 @@
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.location__text {
+  text-transform: capitalize;
+  font-size: 18px;
+}

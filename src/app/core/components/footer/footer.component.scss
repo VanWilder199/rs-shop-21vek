@@ -1,0 +1,13 @@
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  :nth-child(2) {
+    padding: 0 10px;
+  }
+}
+li {
+  list-style-type: none;
+  display: flex;
+  align-items: baseline;
+}

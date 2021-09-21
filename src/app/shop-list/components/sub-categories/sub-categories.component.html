@@ -1,0 +1,11 @@
+<div *ngIf="dataByID">
+  <span>{{dataByID.name}}</span>
+</div>
+<div class="list">
+<mat-list  *ngFor="let subCat of sub" >
+  <a routerLink="{{subCat.id}}"  (mouseenter)="getID($event)" [id]="subCat.name">
+    <mat-list-item>{{subCat.name}}</mat-list-item>
+    <mat-divider></mat-divider>
+  </a>
+</mat-list>
+</div>

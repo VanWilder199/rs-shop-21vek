@@ -1,0 +1,20 @@
+:host {
+}
+ul {
+  display: flex;
+  :nth-child(2) {
+    padding: 0 10px;
+  }
+}
+li {
+  list-style-type: none;
+  display: flex;
+  align-items: baseline;
+}
+.text-call {
+  width: 100px;
+}
+.mat-custom {
+  width: 67px;
+  background-color: transparent;
+}

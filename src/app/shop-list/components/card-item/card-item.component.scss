@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.example-card {
+  display: flex;
+  border-bottom: 5px solid;
+  padding-left: 65px;
+  background-color: lightslategrey;
+}
+.card-btn {
+  display: flex;
+  flex-flow: column-reverse;
+}
+
+
+.card__img {
+  background-color: lightslategrey;
+}
+
+.Id-item {
+  display: flex;
+  justify-content: space-evenly;
+}
+.content {
+  padding-left: 30px;
+}

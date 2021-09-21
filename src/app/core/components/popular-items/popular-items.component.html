@@ -1,0 +1,28 @@
+<h2>Популярные товары</h2>
+<swiper
+  [slidesPerView]="6"
+  [grid]="{
+      rows: 2
+    }"
+  [spaceBetween]="30"
+  [pagination]="{
+      clickable: true
+    }"
+  [navigation]="true"
+  class="mySwiper"
+>
+  <ng-template swiperSlide *ngFor="let dat of data">
+    <a [routerLink]="dat.id">
+      <div class="cards">
+        <img class="img" [src]="dat.imageUrls[0]">
+        <div class="items-text">
+          <h5>{{dat.name}}</h5>
+          <p>{{dat.rating}}</p>
+          <p>{{dat.price}}</p>
+        </div>
+      </div>
+    </a>
+  </ng-template>
+
+
+</swiper>

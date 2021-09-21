@@ -1,0 +1,21 @@
+:host {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: baseline;
+  :nth-child(even) {
+    padding: 0 10px;
+  }
+}
+.mat-custom {
+  width: 67px;
+  background-color: transparent;
+}

@@ -1,0 +1,51 @@
+@import "~swiper/swiper-bundle.css";
+:host {
+  width: 1000px;
+  height: 300px;
+}
+
+.mySwiper {
+  position: relative;
+  width: 70%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: repeat(16, 1fr);
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: calc((70% - 30px) / 2);
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.items-text {
+}
+.cards {
+  display: flex;
+}

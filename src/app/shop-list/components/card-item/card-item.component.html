@@ -1,0 +1,36 @@
+<ng-container *ngIf='checkItem()'>
+  <div class="Id-item">
+    <span>{{this.state.behaviourMainId$ | async}}</span>
+    <span>{{this.state.behaviourSecondId$ | async}}</span>
+  </div>
+  <mat-card
+    class='example-card'
+    *ngFor="let dat of dataSubCategory"
+  >
+    <mat-card-actions class='card-btn'>
+      <button mat-raised-button color="warn">В корзину</button>
+      <button mat-button color="warn" appSwitchColorToClick favorite="{{dat.isFavorite}}" (click)="changeStateFavorite($event)"
+              [id]="dat.id">Добавить в избранное</button>
+      <img class="card__img" [src]="dat.imageUrls[0]">
+    </mat-card-actions>
+    <mat-card-content class="content">
+      <a [routerLink]="dat.id">
+        <h3 class='card__text'>{{ dat.name}}</h3>
+      </a>
+      <h6>Description:</h6>
+      <p>{{ dat.description }}</p>
+     <p>{{dat.price}}р.</p>
+     <p>{{dat.rating}} - рейтинг</p>
+      <div *ngIf="condition(dat.availableAmount)">
+          <span  appSwitchColorToAmount amount="{{dat.availableAmount}}">В наличии</span>
+      </div>
+      <div *ngIf="condition2(dat.availableAmount)">
+        <span >Нет в наличии</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <ng-container *ngIf="checkAmount()">
+    <button (click)="getData()">Еще товар</button>
+  </ng-container>
+
+</ng-container>
