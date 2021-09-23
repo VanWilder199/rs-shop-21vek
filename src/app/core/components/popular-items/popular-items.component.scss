@@ -1,20 +1,13 @@
 @import "~swiper/swiper-bundle.css";
 :host {
-  width: 1000px;
-  height: 300px;
+  width: 1000px ;
+  height: 300px ;
 }
 
-.mySwiper {
-  position: relative;
-  width: 70%;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
 .swiper-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr ;
-  grid-template-columns: repeat(16, 1fr);
+  grid-template-columns: 1fr 1fr !important ;
+  grid-template-columns: repeat(16, 1fr) !important;
 }
 .swiper-slide {
   text-align: center;
@@ -38,14 +31,13 @@
 }
 
 .img {
-  display: block;
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
+  display: block !important;
+  width: 60px !important;
+  height: 60px !important;
+  object-fit: contain !important;
 }
 
-.items-text {
-}
+
 .cards {
   display: flex;
 }

@@ -34,6 +34,7 @@ export class SliderComponent implements OnInit, OnDestroy {
   getAllItemsCategoriesSubscribe() {
     this.st = this.store.subscribe((dat) => {
       dat.itemsCategories.map((el) => {
+        console.log(dat)
          this.data = el.act
       })
     })

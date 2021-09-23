@@ -24,9 +24,26 @@
 }
 
 .Id-item {
+  background: linear-gradient(
+      90deg,#941e94,#e52e6b);
   display: flex;
   justify-content: space-evenly;
 }
 .content {
   padding-left: 30px;
+}
+.changeColor {
+  background-color: white;
+  color: red;
+  border-color: red;
+}
+.default {
+  background-color: initial;
+  color: initial;
+  border-color: initial;
+}
+.changeColorUnique {
+  background-color: white;
+  color: green;
+  border-color: green;
 }

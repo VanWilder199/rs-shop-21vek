@@ -1,11 +1,11 @@
 @import "~swiper/swiper-bundle.css";
 :host {
   position: relative;
-  height: 400px;
+  height: 300px;
 }
 .swiper-slider {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
 }
 
 .swiper-slide {
@@ -29,8 +29,8 @@
 }
 
 .slider-img {
-  display: block;
-  width: 400px;
-  height: 400px;
-  object-fit: contain;
+  display: block !important;
+  width: 300px !important;
+  height: 300px !important;
+  object-fit: contain !important;
 }

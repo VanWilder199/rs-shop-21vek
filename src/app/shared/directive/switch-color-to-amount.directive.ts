@@ -20,7 +20,7 @@ export class SwitchColorToAmountDirective {
     if (amount < 5) {
       return 'red';
     }
-    if (amount <= 19 && amount > 5) {
+    if (amount <= 19 && amount >= 5) {
       return 'yellow';
     }
     if (amount > 20) {

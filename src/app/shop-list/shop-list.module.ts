@@ -11,6 +11,10 @@ import { CardItemComponent } from './components/card-item/card-item.component';
 import {AppModule} from "../app.module";
 import {SwitchColorToAmountDirective} from "../shared/directive/switch-color-to-amount.directive";
 import {SwitchColorToClickDirective} from "../shared/directive/switch-color-to-click.directive";
+import { CardItemDetailsComponent } from './components/card-item-details/card-item-details.component';
+import {SwiperModule} from "swiper/angular";
+import { FavouriteItemsComponent } from './components/favourite-items/favourite-items.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 
 
@@ -21,14 +25,20 @@ import {SwitchColorToClickDirective} from "../shared/directive/switch-color-to-c
     SubCategoriesComponent,
     CardItemComponent,
     SwitchColorToAmountDirective,
-    SwitchColorToClickDirective
+    SwitchColorToClickDirective,
+    CardItemDetailsComponent,
+    FavouriteItemsComponent,
   ],
   exports: [],
-    imports: [
-        SharedModule,
-        MatListModule,
-        ShopListRoutingModule,
+  imports: [
+    SharedModule,
+    MatListModule,
+    ShopListRoutingModule,
+    SwiperModule,
 
-    ]
+  ],
+  providers: [
+    HttpClient
+  ]
 })
 export class ShopListModule { }

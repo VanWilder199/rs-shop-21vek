@@ -5,12 +5,27 @@
   <mat-icon>dashboard</mat-icon>
   Каталог товаров</a>
 <app-search></app-search>
-<a routerLink="auth" mat-stroked-button color="primary">
+<button class="button-rev"  mat-stroked-button color="primary" (click)="onClick(isCheck)">
   <mat-icon>exit_to_app</mat-icon>
   Аккаунт
-  <mat-icon>arrow_drop_up</mat-icon>
-  <mat-icon>arrow_drop_down</mat-icon>
-</a>
+  <mat-icon *ngIf="isCheck">arrow_drop_up</mat-icon>
+  <mat-icon *ngIf="!isCheck">arrow_drop_down</mat-icon>
+  <ng-container *ngIf="isCheck">
+    <div class="container">
+      <mat-icon>account_circle</mat-icon>
+      <a routerLink="auth" mat-raised-button color="primary">Войти</a>
+      <a routerLink="favourite" mat-button color="primary">
+        <mat-icon>shopping_cart</mat-icon>
+        Корзина
+      </a>
+      <a routerLink="waitList" mat-button color="primary">
+        <mat-icon>favorite</mat-icon>
+        Лист ожидания
+      </a>
+    </div>
+  </ng-container>
+</button>
+
 <a routerLink="cart" mat-stroked-button color="primary">
   <mat-icon>shopping_cart</mat-icon>
   Корзина

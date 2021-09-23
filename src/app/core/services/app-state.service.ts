@@ -83,5 +83,11 @@ export class AppStateService {
       )
     })
   }
+  getItemtoID(itemID:string): Observable<IShopItemModel> {
+    return this.httpItemsCategories.getCategoryItems(itemID)
+  }
+  getItemToSearch(text: string): Observable<IShopItemModel[]> {
+    return  this.httpItemsCategories.getItemsToSearch(text)
+  }
 
 }

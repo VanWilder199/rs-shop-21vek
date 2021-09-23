@@ -25,5 +25,13 @@ export class HttpItemsCategoriesService {
     const req = `http://localhost:3004/goods/category/${categoryID}/${subCategoryId}?start=${number}&count=10`
     return this.http.get<IShopItemModel[]>(req)
   }
+  getCategoryItems(itemID:string):Observable<IShopItemModel> {
+    const req = `http://localhost:3004/goods/item/${itemID}`
+    return  this.http.get<IShopItemModel>(req)
+  }
+  getItemsToSearch(text:string): Observable<IShopItemModel[]> {
+    const req = `http://localhost:3004/goods/search?text=${text}`;
+    return this.http.get<IShopItemModel[]>(req);
+  }
 
 }

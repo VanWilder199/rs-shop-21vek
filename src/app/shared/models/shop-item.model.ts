@@ -17,6 +17,6 @@ export interface IShopItemModel {
   isInCart?: boolean,
 
 }
-interface IImageUrls {
+export interface IImageUrls {
   [key: number]: string
 }

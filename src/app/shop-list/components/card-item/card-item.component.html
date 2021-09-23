@@ -8,8 +8,10 @@
     *ngFor="let dat of dataSubCategory"
   >
     <mat-card-actions class='card-btn'>
-      <button mat-raised-button color="warn">В корзину</button>
-      <button mat-button color="warn" appSwitchColorToClick favorite="{{dat.isFavorite}}" (click)="changeStateFavorite($event)"
+      <button mat-raised-button color="warn"
+              (click)="enableDisableRule($event)">
+      В корзину</button>
+      <button mat-button color="warn"   (click)="changeStateFavorite($event)"
               [id]="dat.id">Добавить в избранное</button>
       <img class="card__img" [src]="dat.imageUrls[0]">
     </mat-card-actions>
@@ -20,17 +22,21 @@
       <h6>Description:</h6>
       <p>{{ dat.description }}</p>
      <p>{{dat.price}}р.</p>
-     <p>{{dat.rating}} - рейтинг</p>
+     <p>{{dat.rating}} - рейтинг
+     </p>
       <div *ngIf="condition(dat.availableAmount)">
           <span  appSwitchColorToAmount amount="{{dat.availableAmount}}">В наличии</span>
       </div>
       <div *ngIf="condition2(dat.availableAmount)">
         <span >Нет в наличии</span>
       </div>
+
     </mat-card-content>
   </mat-card>
-  <ng-container *ngIf="checkAmount()">
+  <ng-container *ngIf="checkAmount(dataSubCategory.length)">
     <button (click)="getData()">Еще товар</button>
   </ng-container>
 
 </ng-container>
+
+<router-outlet></router-outlet>

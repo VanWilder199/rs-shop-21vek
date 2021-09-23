@@ -1,11 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Subscription} from "rxjs";
 import {Store} from "@ngrx/store";
 import {AppState} from "../../../redux/state/app.state";
 import {AppStateService} from "../../../core/services/app-state.service";
 import {CategoryModel, ISubCategoryModel} from "../../../shared/models/category.model";
-import {svg1, svg2, svg3, svg4, svg5} from "../../../app.constants";
-import {IShopItemModel} from "../../../shared/models/shop-item.model";
 import {ActivatedRoute, ParamMap} from "@angular/router";
 
 @Component({
@@ -15,10 +12,8 @@ import {ActivatedRoute, ParamMap} from "@angular/router";
 })
 
 export class ShopListPageComponent implements OnInit, OnDestroy {
-  private st!: Subscription;
    data!: CategoryModel[];
    sub!: ISubCategoryModel[];
-   // itemData!: ;
    id: string = '';
    dataByID!: CategoryModel;
 

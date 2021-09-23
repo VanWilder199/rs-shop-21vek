@@ -2,3 +2,18 @@
   width: 450px;
   border-radius: 50%;
 }
+:host {
+  position: relative;
+}
+
+.list {
+  position: absolute;
+  z-index: 3;
+  background: linear-gradient(
+      90deg, #941e94, #e52e6b);
+  border-radius: 1%;
+}
+.link {
+  display: flex;
+  z-index: 3;
+}

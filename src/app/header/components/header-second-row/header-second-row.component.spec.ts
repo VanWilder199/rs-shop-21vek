@@ -1,25 +1,18 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {HeaderSecondRowComponent} from "./header-second-row.component";
 
-import { HeaderSecondRowComponent } from './header-second-row.component';
-
-describe('HeaderSecondRowComponent', () => {
+describe('PopularItemsComponent', () => {
   let component: HeaderSecondRowComponent;
-  let fixture: ComponentFixture<HeaderSecondRowComponent>;
+
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ HeaderSecondRowComponent ]
-    })
-    .compileComponents();
+   component = new HeaderSecondRowComponent();
   });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderSecondRowComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  it('check click true', () => {
+    expect(component.onClick(false)).toBe(true)
+  })
+  it('check click false', () => {
+    expect(component.onClick(true)).toBe(false)
+  })
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });

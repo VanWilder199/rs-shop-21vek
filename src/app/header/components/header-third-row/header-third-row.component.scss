@@ -1,18 +1,25 @@
 
 ul {
+
   background: linear-gradient(
       90deg,#941e94,#e52e6b);
   margin: 0;
-  padding: 0;
+  padding: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  :nth-child(2) {
+  :nth-child(even) {
     padding: 0 10px;
   }
+
 }
 li {
+  color: white;
   list-style-type: none;
   display: flex;
   align-items: baseline;
+}
+a {
+  color: white;
+  text-decoration: none;
 }

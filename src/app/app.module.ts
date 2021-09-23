@@ -19,6 +19,7 @@ import {
 import {ShopListModule} from "./shop-list/shop-list.module";
 import { DefaultMainPageComponent } from './default/default-main-page/default-main-page.component';
 import {HeaderThirdRowComponent} from "./header/components/header-third-row/header-third-row.component";
+import {HttpClient} from "@angular/common/http";
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import {HeaderThirdRowComponent} from "./header/components/header-third-row/head
         AppComponent,
         DefaultMainPageComponent,
         HeaderThirdRowComponent,
+
     ],
     imports: [
         BrowserModule,
@@ -43,10 +45,10 @@ import {HeaderThirdRowComponent} from "./header/components/header-third-row/head
         StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
         EffectsModule.forRoot([]),
     ],
-    providers: [],
-    exports: [
+    providers: [HttpClient],
+  exports: [
 
-    ],
+  ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

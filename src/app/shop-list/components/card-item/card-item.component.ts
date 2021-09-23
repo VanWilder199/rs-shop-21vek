@@ -13,11 +13,18 @@ import {AppStateService} from "../../../core/services/app-state.service";
 })
 export class CardItemComponent implements OnInit {
    num = 0
+  toggle = true;
+  status = 'Enable';
+  sortByPriceReverse: boolean = false;
+
   dataSubCategory!: IShopItemModel[];
+  private isCheck: boolean = true;
+  private isCheck2: boolean = true;
   constructor(public state: AppStateService,private route: ActivatedRoute, private store: Store<AppState>) { }
   ngOnInit(): void {
    this.getData()
     this.getSubCategories()
+
   }
   getSubCategories() {
     this.store.subscribe((data) => {
@@ -39,37 +46,38 @@ export class CardItemComponent implements OnInit {
     this.num += 10
     this.getSubCategories()
   }
-  checkAmount():boolean {
-    return this.dataSubCategory.length > 9
+
+  checkAmount(data: number):boolean {
+    return data > 9
   }
-  condition(data: number) {
+  condition(data: number):boolean  {
    return (data > 0)
   }
-  condition2(data: number) {
+  condition2(data: number):boolean  {
    return (data === 0)
   }
 
   changeStateFavorite(event: MouseEvent) {
-    event.stopPropagation()
-    const boolean = !false;
-    console.log(event.target as Element)
-
-    this.store.subscribe((data) => {
-      data.itemsSubCategory.map((el) => {
-       el.act.find((i) => {
-         const id = (event.target as Element).id
-         console.log(id)
-         console.log(i)
-         if(i.id === id) {
-           console.log(i)
-           i.isFavorite =  true
-           console.log(i.isFavorite)
-         } else {
-           return
-         }
-
-       })
-      })
-    })
+    const elem = event.target as HTMLElement;
+    if(this.isCheck2) {
+      elem.classList.add('changeColorUnique');
+      this.isCheck2 = false;
+    } else  {
+      elem.classList.remove('changeColorUnique')
+      this.isCheck2 = true
+    }
   }
+
+  enableDisableRule(event:MouseEvent) {
+    const elem = event.target as HTMLElement;
+    if(this.isCheck) {
+      elem.classList.add('changeColor');
+      this.isCheck = false;
+    } else  {
+      elem.classList.remove('changeColor')
+      this.isCheck = true
+    }
+  }
+
+
 }
