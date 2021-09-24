@@ -1,0 +1,18 @@
+<mat-form-field class="example-form-field" appearance="fill">
+  <mat-label>Поиск товаров</mat-label>
+  <input matInput type="text" [(ngModel)]="value"
+         (ngModelChange)='changed($event)'>
+  <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+<div class="list">
+  <div *ngFor="let dat of data" >
+    <a class="link" [routerLink]="dat.id" (click)="change()">
+      <img width="150px" height="100px" [src]="dat.imageUrls[0]">
+      <p>{{dat.name}}</p>
+    </a>
+  </div>
+</div>
+
+

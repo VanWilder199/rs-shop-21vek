@@ -1,0 +1,7 @@
+<mat-list class="list-main" *ngFor="let dat of data">
+  <a routerLink="{{dat.id}}" (mouseenter)="getID($event, dat.name)" [id]="dat.id">
+    <mat-list-item [id]="dat.name">{{dat.name}}</mat-list-item>
+    <mat-divider></mat-divider>
+  </a>
+</mat-list>
+

@@ -1,0 +1,26 @@
+
+
+.capability {
+  width: 1200px;
+  margin: 0 auto;
+  ul {
+    padding-left: 10px;
+
+    li {
+      list-style-type: disc;
+    }
+  }
+}
+.advantages{
+  display: grid;
+  width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr;
+}
+li {
+  list-style-type: none;
+}
+.h2clas {
+  margin-left: 370px;
+}

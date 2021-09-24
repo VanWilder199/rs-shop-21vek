@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let dat of subCategories">
+      <a routerLink="list/{{dat.id}}"  mat-button color="primary"
+         (mouseenter)="getID($event)" [id]="main.id"
+      >{{dat.name}}</a>
+  </li>
+
+</ul>

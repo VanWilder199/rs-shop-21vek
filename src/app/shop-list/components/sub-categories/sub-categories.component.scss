@@ -1,0 +1,14 @@
+:host {
+  width: 50%;
+
+}
+.list {
+  width: 50%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+
+}
+.list-main {
+  width: 30%;
+}
