@@ -4,7 +4,7 @@ import { ViewEncapsulation, Component, OnInit } from '@angular/core';
 
 import {AppStateService} from "../../../core/services/app-state.service";
 import {ActivatedRoute} from "@angular/router";
-import {IShopItemModel, IImageUrls} from "../../../shared/models/shop-item.model";
+import { IImageUrls} from "../../../shared/models/shop-item.model";
 import SwiperCore, { EffectFlip, Pagination, Navigation } from "swiper";
 
 SwiperCore.use([EffectFlip, Pagination, Navigation]);
@@ -28,7 +28,6 @@ export class CardItemDetailsComponent implements OnInit {
   ngOnInit(): void {
     const {idItem} = this.route.snapshot.params;
     this.state.getItemtoID(idItem).subscribe((data) => {
-      console.log(data)
       this.dataImg = data.imageUrls
       this.dataName = data.name
       this.dataPrice = data.price

@@ -29,7 +29,6 @@ export class ShopListPageComponent implements OnInit, OnDestroy {
 
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.subID = params.get('id')
-      console.log(this.subID)
     })
   }
   getAllCategories() {

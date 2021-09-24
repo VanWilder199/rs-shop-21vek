@@ -20,11 +20,12 @@ import { DescriptionFeaturesComponent } from './description-features/description
      RegisterComponent,
      DescriptionFeaturesComponent,
   ],
-  exports: [
-    FooterComponent,
-    SliderComponent,
-    PopularItemsComponent
-  ],
+    exports: [
+        FooterComponent,
+        SliderComponent,
+        PopularItemsComponent,
+        DescriptionFeaturesComponent
+    ],
   imports: [
     CommonModule,
     HttpClientModule,

@@ -1,0 +1,24 @@
+<div>
+  <h2 class="h2clas">Наши преимущества</h2>
+<ul class="advantages">
+  <li *ngFor="let advantage of advantages">
+    <div><img src="{{ advantage.img }}" alt=""></div>
+    <div>
+      <h5>{{ advantage.header }}</h5>
+      <p>{{ advantage.content }}</p>
+    </div>
+  </li>
+</ul>
+</div>
+<div class="capability">
+  <h3>Возможности  и преимущества:</h3>
+  <ul>
+    <li>Автоматический слайдер с возможностью выбора слайда</li>
+    <li>Слайдер с популярными товарами</li>
+    <li>Просмотр категорий и товаров</li>
+    <li>Реализован механизм пагинации</li>
+    <li>Просмотр изображений товара</li>
+    <li>Реализован поиск товаров</li>
+  </ul>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/o4b416uPD20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

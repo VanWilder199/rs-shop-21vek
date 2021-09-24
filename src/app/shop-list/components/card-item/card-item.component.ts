@@ -1,5 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {CategoryModel, ISubCategoryModel} from "../../../shared/models/category.model";
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Event} from "@angular/router";
 import {IShopItemModel} from "../../../shared/models/shop-item.model";
 import {Store} from "@ngrx/store";
@@ -15,7 +14,6 @@ export class CardItemComponent implements OnInit {
    num = 0
   toggle = true;
   status = 'Enable';
-  sortByPriceReverse: boolean = false;
 
   dataSubCategory!: IShopItemModel[];
   private isCheck: boolean = true;

@@ -1,12 +1,12 @@
-import {IGoods, IShopItemModel} from "../../shared/models/shop-item.model";
+import {IGoods} from "../../shared/models/shop-item.model";
 import {createReducer, on} from "@ngrx/store";
 import {
   createAllCategories, createcategoryByIdSubCategoryReducer,
   createItemsCategories,
   createItemsCategoriesPopularItems
 } from "../action/itemCategories.action";
-import {CategoryModel, IWrapper} from "../../shared/models/category.model";
-import {categoryByIdSubCategory} from "../selectors/itemsCategories.selectors";
+import { IWrapper} from "../../shared/models/category.model";
+
 
 const initState: IGoods[] = [];
 const initStateCategories: IWrapper[] = []

@@ -1,13 +1,11 @@
-import {Component, ViewEncapsulation, ViewChild, OnInit, OnDestroy} from "@angular/core";
-import {SwiperComponent} from "swiper/angular";
+import {Component, ViewEncapsulation, OnInit, OnDestroy} from "@angular/core";
 import SwiperCore, {Autoplay, Pagination, Navigation} from "swiper";
-import {HttpItemsCategoriesService} from "../../services/http-items-categories.service";
-import {IGoods, IShopItemModel} from "../../../shared/models/shop-item.model";
-import {Observable, Subscription} from "rxjs";
+import { IShopItemModel} from "../../../shared/models/shop-item.model";
+import { Subscription} from "rxjs";
 import {Store} from "@ngrx/store";
 import {AppState} from "../../../redux/state/app.state";
 import {AppStateService} from "../../services/app-state.service";
-import {createItemsCategories} from "../../../redux/action/itemCategories.action";
+
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
@@ -34,7 +32,6 @@ export class SliderComponent implements OnInit, OnDestroy {
   getAllItemsCategoriesSubscribe() {
     this.st = this.store.subscribe((dat) => {
       dat.itemsCategories.map((el) => {
-        console.log(dat)
          this.data = el.act
       })
     })

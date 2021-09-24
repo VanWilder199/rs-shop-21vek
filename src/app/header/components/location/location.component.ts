@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs";
 import {LocationService} from "../../../core/services/location.service";
 
 @Component({
